@@ -1,0 +1,278 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+   <title>
+      Solo Learn- HTML
+   </title>
+   <script>
+      function allowDrop(ev) {
+         ev.preventDefault();
+      }
+
+      function drag(ev) {
+         ev.dataTransfer.setData("text", ev.target.id);
+      }
+
+      function drop(ev) {
+         ev.preventDefault();
+         var data = ev.dataTransfer.getData("text");
+         ev.target.appendChild(document.getElementById(data));
+      }
+   </script>
+</head>
+
+<body bgcolor="#777777">
+   <input id="mysearch" name="searchitem" type="search" list="colors" />
+   <datalist id="colors">
+      <option value="Red">
+      <option value="Green">
+      <option value="Yellow">
+   </datalist>
+
+   <!-- <svg width="100" height="100">
+      <circle cx="80" cy="80" r="50" fill="green" />
+   </svg> -->
+   <!-- <svg width="300" height="100">
+      <rect width="300" height="100" x="20" y="20" fill="green" />
+   </svg> -->
+   <!-- <svg width="400" height="410">
+      <line x1="10" y1="10" x2="200" y2="100" style="stroke:#FFFFFF; stroke-linecap:round; 
+          stroke-width:20" />
+   </svg> -->
+   <!-- <svg width="2000" height="500">
+      <polyline style="stroke-linejoin:miter; stroke:white; 
+          stroke-width:12; fill: none;" points="100 100, 150 150, 200 100" />
+   </svg> -->
+   <!-- <svg height="500" width="1000">
+      <ellipse cx="200" cy="100" rx="150" ry="70" style="fill:green" />
+   </svg> -->
+   <!-- <svg width="500" height="500">
+      <polygon points="100 100, 200 200, 300 0" style="fill: green; stroke:black;" />
+   </svg> -->
+   <!-- <svg width="1000" height="250">
+      <rect width="150" height="150" fill="orange">
+         <animate attributeName="x" from="0" to="300" dur="3s" fill="freeze" repeatCount="indefinite" />
+      </rect>
+   </svg> -->
+   <!-- <svg width="500" height="500">
+      <path d="M 0 0 L200 200 L200 0 Z" style="stroke:#FFF;  fill:none;" />
+   </svg> -->
+
+   <!-- <div id="box" ondrop="drop(event)" ondragover="allowDrop(event)" style="border:1px solid black; 
+   width:640px; height:480px"></div>
+
+   <img id="image" src="eason.jpg" draggable="true" ondragstart="drag(event)" width="150" height="50" alt="" /> -->
+
+   <!-- <script>
+      localStorage.setItem("location", navigator.geolocation.getCurrentPosition());
+      //this will print the value
+      alert(localStorage.getItem("location"));
+   </script> -->
+
+   <!-- <canvas id="canvas1" width="600" height="400">
+   </canvas>
+   <script>
+      var c = document.getElementById("canvas1");
+      var ctx = c.getContext("2d");
+      
+      // ctx.fillStyle = "rgba(0, 200, 0, 1)";
+      // ctx.fillRect(20, 20, 100, 100);
+
+      // ctx.font = "bold 22px Tahoma";
+      // ctx.textAlign = "start";
+      // ctx.fillText("start", 10, 30);
+
+      // ctx.translate(20, 30);
+      // ctx.fillText("after translate", 10, 30);
+
+      // ctx.fillStyle = "#FF0000";
+      // ctx.fillRect(10, 10, 100, 100);
+
+      // ctx.rotate((Math.PI / 180) * 25);  //rotate 25 degrees.
+      // ctx.fillStyle = "#0000FF";
+      // ctx.fillRect(10, 10, 100, 100);
+
+      ctx.font = "bold 22px Tahoma";
+      ctx.textAlign = "start";
+      ctx.fillText("start", 10, 30);
+      ctx.translate(100, 150);
+      ctx.fillText("after translate", 0, 0);
+      ctx.rotate(1);
+      ctx.fillText("after rotate", 0, 0);
+      ctx.scale(1.5, 4);
+      ctx.fillText("after scale", 0, 20);
+   </script> -->
+
+   <P>
+      <font color="#FFFFFF">Status: </font><progress min="0" max="100" value="69">
+      </progress>
+   </P>
+
+   <video width="640" height="480" controls autoplay loop>
+      <source src="video.mp4" type="video/mp4">
+      <source src="video.ogg" type="video/ogg">
+      Video is not supported by your browser
+   </video>
+   <br />
+   <audio controls autoplay loop>
+      <source src="audio.mp3" type="audio/mpeg">
+      <source src="audio.ogg" type="audio/ogg">
+      Audio element not supported by your browser.
+   </audio>
+   <br />
+   <article>
+      <nav>
+         <header>
+            <h1> <a href="#">Home</a> </h1>
+            <h3> <a href="#">Services</a> </h3>
+            <h5> <a href="#">About us</a> </h5>
+         </header>
+      </nav>
+      <aside>
+         <p>
+            <font color="#FFFFFF">Gifts will be delivered to you within 24 hours</font>
+         </p>
+      </aside>
+   </article>
+   <br />
+   <h1>
+      <font color="#FFFFFF"><span>About Me</span></font>
+   </h1>
+   <div style="background-color:rgb(0, 64, 0); color:white; padding:20px;">
+      <p>
+         Hi! I'm <strong>Eason</strong>. I'm interested in solving problems. I believe in the zen of the Python:
+         <i>"If the implementation is hard to explain, it is not a good idea; if it is easy to explain, it may be a good
+            idea."</i> I like verifying the solutions with <b>MATLAB</b>, <b>Python</b>. When it comes to the
+         implementation, <small>C/C++/C#</small> or
+         <small>JAVA</small> can be an option for me, but <em>Python</em> is my true love. I am capable of doing
+         surveys with patents or thesis, work as a team and communicate in English.
+      </p>
+      <p align="right" class="quote">"Declare variables, not war"</p>
+      <p align="center">
+         <img draggable="true" src="eason.jpg" width="20%" border="3px" alt="The image can not be found!" />
+      </p>
+   </div>
+   <br />
+   <hr />
+   <h1>
+      <font color="#FFFFFF"><span>My Skills</span></font>
+   </h1>
+   <div style="background-color:rgb(0, 64, 0); color:white; padding:20px;">
+      <p>
+         The courses that I finished in
+         <a href="http://www.sololearn.com" target="_blank">
+            Sololearn</a>:
+      </p>
+      <ul>
+         <li>Python</li>
+         <li>JAVA</li>
+         <li>C#</li>
+         <li>C++</li>
+         <li>C</li>
+         <li>SOL</li>
+         <li>HTML</li>
+      </ul>
+      <p>
+         The courses that I'm going to finish in
+         <a href="http://www.sololearn.com" target="_blank">
+            Sololearn</a>:
+      </p>
+      <ol>
+         <li>CSS</li>
+         <li>JavaScript</li>
+         <li>JQuery</li>
+      </ol>
+   </div>
+   <br />
+   <hr />
+   <h1>
+      <font color="#FFFFFF"><span>My Schedule</span></font>
+   </h1>
+   <div style="background-color:rgb(0, 64, 0); color:white; padding:20px;">
+      <table border="2">
+         <tr>
+            <th bgcolor="purple">Day</th>
+            <th bgcolor="orange">Mon</th>
+            <th bgcolor="red">Tue</th>
+            <th bgcolor="blue">Wed</th>
+            <th bgcolor="brown">Thu</th>
+            <th bgcolor="gold">Fri</th>
+         </tr>
+         <tr>
+            <td><span style="color:white">09 - 10</span></td>
+            <td class="selected">Pull myself together</td>
+            <td>Scrum Meeting</td>
+            <td>Scrum Meeting</td>
+            <td>Scrum Meeting</td>
+            <td>Scrum Meeting</td>
+         </tr>
+         <tr>
+            <td><span style="color:white">10 - 11</span></td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+         </tr>
+         <tr>
+            <td><span style="color:white">11 - 12</span></td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+         </tr>
+         <tr>
+            <td><span style="color:white">14 - 15</span></td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+         </tr>
+         <tr>
+            <td><span style="color:white">15 - 16</span></td>
+            <td>Weekly Plane Meeting</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Weekly Algo Meeting</td>
+            <td>Available</td>
+         </tr>
+      </table>
+   </div>
+   <br />
+   <hr />
+   <h1>
+      <font color="#FFFFFF"><span>Contact Me</span></font>
+   </h1>
+   <form autocomplete="off">
+      <label>
+         <font color="#FFFFFF"><span>Name:</span></font>
+      </label>
+      <input name="name" type="text" placeholder="Eason" autofocus required /><br />
+      <label>
+         <font color="#FFFFFF"><span>Email:</span></font>
+      </label>
+      <input name="email" type="email" placeholder="email@example.com" autofocus required /><br />
+      <label>
+         <font color="#FFFFFF"><span>Message: </span></font><br />
+      </label>
+      <textarea name="message" placeholder="You are so handsome!" autofocus required></textarea>
+      <input type="submit" value="SEND" class="submit" /><br />
+   </form>
+   <div class="section">
+      <h1>
+         <font color="#FFFFFF"><span>My Media</span></font>
+      </h1>
+      <iframe height="480" width="640" src="https://www.youtube.com/embed/Q6_5InVJZ88" allowfullscreen
+         frameborder="0"></iframe>
+   </div>
+   <br />
+   <hr />
+   <footer>
+      <font color="#FFFFFF">I am just a dust in the wind.</font>
+   </footer>
+</body>
+
+</html>
